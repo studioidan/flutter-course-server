@@ -5,62 +5,62 @@ const router = express.Router();
 
 router.route('/fruits')
     .get((req, res) => {
-        const baseUrl = '';
+        const baseUrl = 'https://flutter-course.herokuapp.com/images/';
         res.json([
             {
                 name: 'בננה',
-                'image': '',
+                'image': baseUrl + 'banana.png',
                 price: 0.4
             },
             {
                 name: 'מלון',
-                'image': '',
-                price: 0.2
+                'image': baseUrl + 'melon.png',
+                price: 0.94
             },
             {
                 name: 'תפוח',
-                'image': '',
+                'image': baseUrl + 'apple.png',
                 price: 0.6
             },
             {
                 name: 'אבוקדו',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'avokado.png',
+                price: 2.26
             },
             {
                 name: 'תמר',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'dates.png',
+                price: 1.6
             },
             {
                 name: 'אפרסק',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'peach.png',
+                price: 0.78
             },
             {
                 name: 'תפוז',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'orange.png',
+                price: 0.36
             },
             {
                 name: 'קלמנטינה',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'mandarine.png',
+                price: 0.55
             },
             {
                 name: 'כרוב',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'cabbage.png',
+                price: 0.23
             },
             {
                 name: 'חציל',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'eggplant.png',
+                price: 0.9
             },
             {
                 name: 'אבטיח',
-                'image': '',
-                price: 0.6
+                'image': baseUrl + 'watermelon.png',
+                price: 1.3
             }
 
         ]);
