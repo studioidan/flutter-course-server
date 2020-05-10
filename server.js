@@ -5,6 +5,8 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 
+app.use(express.static('public'))
+
 // middleware
 app.use(bodyParser.json({limit: '50mb'})); // for parsing application/json
 app.use(bodyParser.urlencoded({extended: true, limit: '50mb'})); // for parsing
