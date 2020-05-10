@@ -1,10 +1,17 @@
 const express = require('express');
+const consts = require('../consts');
 const router = express.Router();
-
 
 router.route('/login')
     .post((req, res) => {
-        res.json({name: 'idan'});
+        const username = req.body.username;
+        const password = req.body.password;
+        if (username !== 'flutter' || password !== '1234') {
+            res.status(402).send('Username or password is incorrect');
+            return;
+        }
+
+        res.json({token: consts.TOKEN});
     });
 
 router.route('/fruits')
@@ -13,6 +20,5 @@ router.route('/fruits')
             'Banana', 'Melon'
         ]);
     });
-
 
 module.exports = router;
